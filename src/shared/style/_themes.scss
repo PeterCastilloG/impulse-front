@@ -1,0 +1,45 @@
+@import 'variables';
+
+$themes: (
+  light: (
+    "bg-btns": $color-btns-dark,
+    "color-azul-impulse1": $color-azul-impulse1-dark,
+    "color-azul-impulse3": $color-azul-impulse3-dark,
+    "color-azul-impulse4": $color-azul-impulse4-dark,
+    "color-fondo-login": $color-fondo-login-dark,
+    "color-items": $color-items-dark
+  ),
+  dark: (
+    "bg-btns": $color-btns-dark,
+    "color-azul-impulse1": $color-azul-impulse1-dark,
+    "color-azul-impulse3": $color-azul-impulse3-dark,
+    "color-azul-impulse4": $color-azul-impulse4-dark,
+    "color-fondo-login": $color-fondo-login-dark,
+    "color-items": $color-items-dark
+  )
+);
+
+@mixin theme() {
+  @each $theme, $map in $themes {
+    $theme-map: $map !global;
+    :global(.#{$theme}) & {
+      @content;
+    };
+  }
+  $theme-map: null !global;
+}
+
+@mixin themeg() {
+  @each $theme, $map in $themes {
+    $theme-map: $map !global;
+    .#{$theme} & {
+      @content;
+    }
+  }
+  $theme-map: null !global;
+}
+
+
+@function theme-get($key) {
+  @return map-get($theme-map, $key);
+}

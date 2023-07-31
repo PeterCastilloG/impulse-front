@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 750px) {
+    display: none;
+  }
+  .props {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-bottom: solid 1px white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    height: 50px;
+    span {
+      &:nth-child(1) {
+        width: 70px;
+      }
+      &:nth-child(2) {
+        flex-grow: 1;
+      }
+    }
+  }
+}

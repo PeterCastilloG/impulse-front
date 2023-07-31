@@ -1,0 +1,45 @@
+  .types {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .label {
+      color: #a0aec0;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    .items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+      height: 48px;
+      background: linear-gradient(175deg,
+          rgba(6, 11, 38, 0.74) 0%,
+          rgba(6, 43, 99, 0.5) 100%);
+      backdrop-filter: blur(25px);
+      max-width: 650px;
+        width: 100%;
+        margin: auto;
+      .type {
+        padding: 10px 15px;
+        border-radius: 8px;
+        width: 96px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+          border: 1.5px solid #007bff44;
+        }
+
+        &.selected {
+          border: 1.5px solid #007cff;
+        }
+      }
+    }
+  }

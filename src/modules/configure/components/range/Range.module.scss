@@ -1,0 +1,54 @@
+.challenge {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .label {
+    color: #a0aec0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  .balance {
+    display: flex;
+    justify-content: space-between;
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+
+    span {
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      padding: 0rem;
+      cursor: pointer;
+    }
+  }
+
+  .range {
+    padding: 0px 5px;
+    max-width: 650px;
+    display: flex;
+    align-self: center;
+    width: 100%;
+
+    span {
+      color: #a0aec0;
+      text-align: right;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      margin-top: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.container {
+  &.ableBtns {
+    a, button, div {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+  .title {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+    display: flex;
+  }
+}
+

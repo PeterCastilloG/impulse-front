@@ -1,0 +1,141 @@
+@import "../../../../shared/style/themes";
+.stats_data {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 15px;
+  color: white;
+  .data_title {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    @media screen and (max-width: 1300px) {
+      display: none;
+    }
+    @media screen and (max-width: 600px) {
+      display: flex;
+    }
+    span {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+  .data {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    @media screen and (max-width: 1300px) {
+      flex-direction: column;
+    }
+    .main_info {
+      display: flex;
+      gap: 1rem;
+      flex-grow: 1;
+      flex-basis: 0;
+      .data_title {
+        flex-grow: 1;
+        flex-basis: 0;
+        display: none;
+        @media screen and (max-width: 1300px) {
+          display: flex;
+        }
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+      .main {
+        flex-grow: 1;
+        flex-basis: 0;
+        @include theme() {
+          background: theme-get("color-fondo-login");
+        }
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        @media screen and (max-width: 1300px) {
+          order: 0;
+          margin-left: 40px;
+        }
+        @media screen and (max-width: 600px) {
+          margin-left: 0px;
+        }
+        .title {
+          white-space: nowrap;
+        }
+        .info {
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          span {
+            &:nth-child(1) {
+              font-size: 25px;
+              font-weight: 700;
+            }
+            &:nth-child(2) {
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+    .stats_group {
+      display: flex;
+      gap: 1rem;
+      flex-grow: 1;
+      flex-basis: 0;
+      @media screen and (max-width: 1300px) {
+        order: 1;
+      }
+      .stat {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-basis: 0;
+        background: linear-gradient(
+          126.97deg,
+          rgba(6, 11, 38, 0.74) 28.26%,
+          rgba(6, 43, 99, 0.5) 91.2%
+        );
+        flex-grow: 1;
+        border-radius: 20px;
+        padding: 20px;
+        min-width: 200px;
+        .title {
+          white-space: nowrap;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          color: #a0aec0;
+        }
+        @media screen and (max-width: 600px) {
+          padding: 12px;
+          min-width: 0px;
+          .title {
+            white-space: normal;
+          }
+        }
+        .info {
+          display: flex;
+          gap: 0.3rem;
+          align-items: center;
+          span {
+            &:nth-child(1) {
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 700;
+            }
+            &:nth-child(2) {
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
